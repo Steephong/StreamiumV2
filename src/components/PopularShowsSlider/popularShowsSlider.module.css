@@ -1,0 +1,90 @@
+.popularShows {
+  position: relative;
+  margin: 0 1.5rem;
+}
+
+.popularShows h3 {
+  color: var(--text-color);
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.popularShows {
+  margin-top: 5rem;
+}
+
+.popularShowsContent {
+  overflow: visible !important;
+  height: min-content !important;
+}
+
+.popularShowsItem {
+  width: min-content !important;
+}
+
+.popularShowsItem:last-child {
+  margin-right: 4.5rem;
+}
+
+.arrowButtonLeft,
+.arrowButtonRight {
+  width: 2rem;
+  height: 2rem;
+  background-color: #28262d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.buttonContainerAbove {
+  margin-right: 0.5rem;
+}
+
+.buttonContainerAbove div {
+  width: 2rem;
+  height: 2rem;
+}
+
+.arrowButtonLeft svg,
+.arrowButtonRight svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.arrowButtonLeft svg {
+  transform: translateX(-5%);
+}
+
+.arrowButtonRight svg {
+  transform: translateX(5%);
+}
+
+.buttonContainerAbove {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small);
+}
+
+.buttonContainerAbove {
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  position: absolute;
+  top: calc(50% + 1.5rem);
+  right: 0;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 960px) {
+  .popularShows {
+    margin: 3rem var(--spacing-medium) 0 var(--spacing-medium);
+  }
+
+  .popularShowsItem:last-child {
+    margin-right: 0rem;
+  }
+}

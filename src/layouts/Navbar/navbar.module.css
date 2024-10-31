@@ -1,0 +1,348 @@
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  90% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+nav {
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-color);
+  position: absolute;
+  width: 100vw;
+  padding-top: 0.75rem;
+  padding-bottom: var(--spacing-medium);
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-right: 1rem;
+}
+
+ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: var(--primary-color);
+}
+
+.branding {
+  display: flex;
+  color: var(--primary-color);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 var(--spacing-large);
+  padding: 0;
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: var(--spacing-large);
+  flex: 1;
+}
+
+.actions .searchIcon,
+.actions .notifications {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  stroke: var(--primary-color) !important;
+  cursor: pointer;
+}
+
+.actions .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileOptionsContainer {
+  position: absolute;
+  top: 0;
+}
+
+.actions .profile .profileOptionsContainer:not(.active) {
+  display: none;
+}
+
+.profileOptionsContainer.active {
+  display: block;
+}
+
+.profileClick {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions .profile .profileOptions {
+  flex-direction: column;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius-small);
+  top: 3rem;
+  right: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.actions .profile .profileOptions li {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.actions .profile:hover {
+  cursor: pointer;
+}
+
+.actions .profile .UserImage {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid var(--text-color);
+}
+
+.actions .profile .ArrowDown {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-left: 0.25rem;
+}
+
+.links a.active {
+  color: var(--primary-color);
+}
+
+.notifications:hover {
+  animation: shake 1s;
+}
+
+.actions .searchBar {
+  /* max-width: 250px; */
+  min-width: 100px;
+  width: 35%;
+  display: flex;
+  margin-right: 1rem;
+}
+
+.actions .searchBar input {
+  height: 100%;
+  width: 0%;
+  margin-left: 100%;
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  transition: all 0.5s;
+}
+
+.actions .searchBar input:focus {
+  outline: none;
+  width: 100%;
+  margin-left: 0;
+}
+
+.logContainer {
+  display: flex;
+  align-items: center;
+}
+
+.loginButton,
+.signupButton {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-small);
+  text-decoration: none;
+  border-style: none;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: var(--font-size-small);
+}
+
+.loginButton {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+  transition: scale 0.3s;
+}
+
+.signupButton {
+  background-color: transparent;
+  color: var(--text-color);
+  margin-right: 1rem;
+  border: 2px solid var(--text-color);
+  transition: scale 0.3s;
+}
+
+.loginButton:hover,
+.signupButton:hover {
+  scale: 1.05;
+}
+
+.menuBurgerIcon {
+  display: flex;
+  z-index: 9999;
+  width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  min-width: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  margin-left: var(--spacing-medium);
+}
+
+.menuBurgerIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.menuBurgerIcon ~ .branding {
+  display: none;
+}
+
+.menuBurger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+  z-index: 9998;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.menuBurger.active {
+  transform: translateX(0);
+}
+
+.menuBurgerHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-medium);
+}
+
+.menuBurgerLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menuBurgerLinks li {
+  margin: 1rem 0;
+}
+
+.menuBurgerLinks li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--font-size-title);
+}
+
+.menuBurgerLinks li a.active {
+  color: var(--primary-color);
+}
+
+.displayName {
+  margin: 0 var(--spacing-small) 0 0;
+  padding: 0;
+  max-width: 10vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--font-size-medium);
+}
+
+/* mobile */
+@media (max-width: 960px) {
+  .loginButton {
+    font-size: var(--font-size-large);
+  }
+
+  .searchBar input {
+    font-size: var(--font-size-large);
+  }
+
+  .actions {
+    margin-right: var(--spacing-medium);
+  }
+}

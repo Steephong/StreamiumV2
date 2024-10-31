@@ -1,0 +1,323 @@
+.playerPage {
+  position: relative;
+  padding: 75px 1.5rem 0 1.5rem;
+  background-size: cover;
+  min-height: calc(150vh - 75px);
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  margin-bottom: 1rem;
+  font-size: var(--font-size-medium);
+  font-weight: lighter;
+  color: var(--secondary-color);
+}
+
+.breadcrumbs a {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbs span {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  font-size: var(--font-size-title);
+}
+
+.breadcrumbs p {
+  margin: 0;
+  padding: 0;
+  color: var(--secondary-color);
+}
+
+.breadcrumbs a:hover {
+  color: var(--primary-color);
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  min-height: calc(70vw * 9 / 16);
+}
+
+.playerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65vw;
+  height: calc(65vw * 9 / 16);
+  background-color: var(#000);
+  border-radius: var(--border-radius-medium);
+  box-sizing: border-box;
+}
+
+.playerContainerMovie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(65vw);
+  height: calc(65vw * 9 / 16);
+  background-color: var(#000);
+  border-radius: var(--border-radius-medium);
+  box-sizing: border-box;
+}
+
+.playerContainer iframe,
+.playerContainerMovie iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-medium);
+}
+
+.playerContainerError {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: var(--font-size-medium);
+  color: var(--text-color);
+}
+
+.playerContainerError p {
+  margin: 0;
+  padding: 0;
+}
+
+.episodesContainer {
+  display: flex;
+  width: 30vw;
+  height: calc(70vw * 9 / 16);
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.episodesList {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.episodeCard {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-small);
+  width: 100%;
+  height: 5rem;
+  padding: var(--spacing-xsmall);
+  background-color: var(--background-color);
+  border-radius: var(--border-radius-small);
+  box-sizing: border-box;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.episodeCard.active {
+  background-color: var(--primary-color);
+}
+
+.episodeCard:not(.active):hover {
+  background-color: rgba(var(--secondary-color-rgb), 0.35);
+}
+
+.episodeCard img {
+  min-width: calc((5rem - 2 * var(--spacing-small)) * 16 / 9);
+  width: calc((5rem - 2 * var(--spacing-small)) * 16 / 9);
+  max-width: calc((5rem - 2 * var(--spacing-small)) * 16 / 9);
+  height: 100%;
+  border-radius: var(--border-radius-small);
+  object-fit: cover;
+}
+
+.episodeCard .episodeInfo {
+  display: flex;
+  height: 5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-small);
+}
+
+.episodeCardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.episodeCardTitle {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-medium);
+  font-weight: bold;
+  color: var(--text-color);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.episodeCardOverview {
+  margin: 0;
+  padding: 0;
+  height: 2.5rem;
+  font-size: var(--font-size-small);
+  font-weight: lighter;
+  color: var(--text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.episodeCardSub {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--spacing-small);
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-small);
+  font-weight: lighter;
+  color: var(--text-color);
+}
+
+.episodeRating {
+  margin: 0;
+  padding: var(--spacing-xsmall) var(--spacing-small);
+  background-color: var(--text-color);
+  color: var(--background-color);
+  width: fit-content;
+  border-radius: var(--border-radius-xsmall);
+  font-size: var(--font-size-small);
+  font-weight: bold;
+}
+
+.epSearch {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small);
+  padding: var(--spacing-small);
+  margin: var(--spacing-small);
+  background-color: var(--background-color);
+  border: 2px solid var(--primary-color);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+.playerOptionsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-small) 0;
+}
+
+.playerBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-xsmall) var(--spacing-small);
+  border: 2px solid var(--text-color);
+  border-radius: var(--border-radius-small);
+  background-color: rgba(var(--secondary-color-rgb), 0);
+  color: var(--text-color);
+  font-size: var(--font-size-small);
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: scale 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.playerBtn.active {
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.playerBtn:hover {
+  scale: 1.05;
+}
+
+.alertBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 2rem;
+  color: var(--error-color);
+  background-color: var(--background-color);
+  border: 2px solid var(--error-color);
+  border-radius: var(--border-radius-small);
+  gap: var(--spacing-small);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.alertIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--error-color);
+}
+
+.alertBtn p {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-small);
+  font-weight: bold;
+}
+
+.alertBtn:hover {
+  background-color: rgba(var(--error-color-rgb), 0.25);
+}
+
+.playerSelectContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  border-radius: var(--border-radius-small);
+  gap: var(--spacing-small);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.tvIcon,
+.arrowRightIcon {
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--text-color);
+  pointer-events: none;
+}
+
+.arrowRightIcon {
+  right: var(--spacing-small);
+}
+
+.tvIcon {
+  left: var(--spacing-small);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  /* background-color: var(--secondary-color); */
+  margin: calc(var(--spacing-large) * 2) 0;
+}

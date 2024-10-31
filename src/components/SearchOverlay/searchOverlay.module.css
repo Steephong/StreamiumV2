@@ -1,0 +1,38 @@
+.searchOverlayContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.numResFound {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+  width: 15rem;
+}
+
+.numResFound span {
+  color: var(--primary-color);
+}
+
+.resultsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 15rem));
+  padding: 75px var(--spacing-large);
+  width: 100%;
+  gap: var(--spacing-large) var(--spacing-large);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  justify-content: center;
+}
+.resultItem {
+  cursor: auto;
+}

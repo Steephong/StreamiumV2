@@ -1,0 +1,37 @@
+:root {
+  /* colors */
+  --primary-color: #2ab875;
+  --primary-color-rgb: 42, 184, 117;
+  --secondary-color: #929292;
+  --secondary-color-rgb: 146, 146, 146;
+  --background-color: #08080a;
+  --background-color-rgb: 8, 8, 10;
+  --text-color: #ffffff;
+  --text-color-rgb: 255, 255, 255;
+  --success-color: #00ff00;
+  --success-color-rgb: 0, 255, 0;
+  --warning-color: #ffcc00;
+  --warning-color-rgb: 255, 204, 0;
+  --error-color: #db2c2c;
+  --error-color-rgb: 219, 44, 44;
+
+  /* font sizes */
+  --font-size-small: 0.75rem;
+  --font-size-medium: 0.85rem;
+  --font-size-large: 1rem;
+  --font-size-xlarge: 1.25rem;
+  --font-size-title: 1.5rem;
+  --font-size-title-large: 2rem;
+
+  /* border radius */
+  --border-radius-xsmall: 0.25rem;
+  --border-radius-small: 0.5rem;
+  --border-radius-medium: 1rem;
+  --border-radius-large: 2rem;
+
+  /* spacing */
+  --spacing-xsmall: 0.25rem;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 1.5rem;
+}

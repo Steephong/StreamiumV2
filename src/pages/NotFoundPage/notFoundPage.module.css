@@ -1,0 +1,61 @@
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.notFoundContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.notFoundContainer h1 {
+  font-size: var(--font-size-title-large);
+  margin: 1rem 0;
+  color: var(--primary-color);
+}
+
+.notFoundContainer h2 {
+  z-index: -1;
+  position: absolute;
+  font-size: 10rem;
+  color: var(--text-color);
+  opacity: 0.1;
+  transform: translate(0%, -35%);
+}
+
+.notFoundContainer p {
+  font-size: var(--font-size-large);
+  color: var(--text-color);
+}
+
+.bounce {
+  animation: bounce 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+.notFoundContainer a {
+  text-decoration: none;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  font-weight: bold;
+}

@@ -1,0 +1,338 @@
+.upcomingAndAiringSection {
+  display: flex;
+  margin: 5rem var(--spacing-large) 0 var(--spacing-large);
+  justify-content: space-between;
+}
+
+.upcoming {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 31.5rem;
+  max-width: calc(100vw - var(--spacing-medium) * 2);
+  color: var(--text-color);
+}
+
+.upcomingImage {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-medium);
+}
+
+.upcomingDate {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  border-radius: var(--border-radius-medium);
+  font-size: var(--font-size-medium);
+}
+
+.upcomingTitle {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  color: var(--primary-color);
+}
+
+.upcomingGenres {
+  font-size: var(--font-size-medium);
+  color: var(--secondary-color);
+  margin: 0.5rem 0;
+}
+
+.upcomingOverview {
+  font-size: var(--font-size-medium);
+  margin: 0;
+}
+
+.upcomingButtons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  bottom: 0.1%;
+}
+
+.upcomingButtons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-small);
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: var(--font-size-medium);
+  font-weight: 700;
+  cursor: pointer;
+  border-style: none;
+  white-space: nowrap;
+  transition: scale 0.3s;
+}
+
+.upcomingButtons button:hover {
+  scale: 1.05;
+}
+
+.upcomingButtons button svg {
+  margin-right: 0.5rem;
+}
+
+.upcomingButtons button:first-child {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.upcomingButtons button:nth-child(2) {
+  background-color: var(--background-color);
+  border: 2px solid var(--text-color);
+}
+
+.upcomingContentContainer {
+  width: 100%;
+  border-radius: var(--border-radius-medium) 1rem 0.5rem 0.5rem;
+}
+
+.upcomingContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 37rem;
+}
+
+.titleAndButton h3,
+.airingSeries h3 {
+  color: var(--text-color);
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.titleAndButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.arrowButtonLeft,
+.arrowButtonRight {
+  width: 2rem;
+  height: 2rem;
+  background-color: #28262d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.buttonContainerAbove {
+  margin-right: 0.5rem;
+}
+
+.buttonContainerAbove div {
+  width: 2rem;
+  height: 2rem;
+}
+
+.arrowButtonLeft svg,
+.arrowButtonRight svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.arrowButtonLeft svg {
+  transform: translateX(-5%);
+}
+
+.arrowButtonRight svg {
+  transform: translateX(5%);
+}
+
+.buttonContainer,
+.buttonContainerAbove {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small);
+}
+
+.buttonContainerAbove {
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  position: absolute;
+  top: calc(50% + 1.5rem);
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.airingSeries,
+.inTheaters {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 20rem;
+  color: var(--text-color);
+}
+
+.airingContentContainer,
+.inTheatersContentContainer {
+  color: var(--text-color);
+  height: 37rem !important;
+  margin: 0 !important;
+  border-radius: var(--border-radius-medium);
+}
+
+.airingContent,
+.inTheatersContent {
+  height: 8.5rem !important;
+}
+
+.airingContent a,
+.inTheatersContent a {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  gap: var(--spacing-medium);
+}
+
+.airingImage,
+.inTheatersImage {
+  width: 6rem;
+  height: 8.5rem;
+  object-fit: cover;
+  border-radius: var(--border-radius-medium);
+}
+
+.airingDetails,
+.inTheatersDetails {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 12.5rem;
+}
+
+.airingDetails h5,
+.inTheatersDetails h5 {
+  font-size: var(--font-size-medium);
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.airingGenres,
+.inTheatersGenres {
+  font-size: var(--font-size-small);
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.airingRating,
+.inTheatersRating {
+  font-size: var(--font-size-medium);
+  margin: 0;
+}
+
+.airingRating span:first-child,
+.inTheatersRating span:first-child {
+  color: #ffae00;
+}
+
+.arrowButtonTop,
+.arrowButtonBottom {
+  width: 2rem;
+  height: 2rem;
+  background-color: #28262d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.arrowButtonTop svg,
+.arrowButtonBottom svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 2rem !important;
+  height: 2rem !important;
+  background-color: var(--background-color);
+  border-radius: 50%;
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.readMore {
+  font-size: var(--font-size-medium);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .upcomingAndAiringSection {
+    flex-direction: column;
+    margin: 3rem var(--spacing-medium) 0 var(--spacing-medium);
+  }
+
+  .upcomingDate {
+    font-size: var(--font-size-small);
+  }
+
+  .upcomingTitle {
+    font-size: var(--font-size-title);
+  }
+
+  .upcomingGenres {
+    font-size: var(--font-size-small);
+  }
+
+  .upcomingOverview {
+    font-size: var(--font-size-medium);
+  }
+
+  .upcomingButtons {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: var(--spacing-medium);
+  }
+
+  .upcoming {
+    width: 100%;
+  }
+
+  .upcomingButtons button {
+    font-size: var(--font-size-small);
+  }
+
+  .upcomingContent {
+    min-height: 30rem !important;
+  }
+
+  .readMore {
+    font-size: var(--font-size-small);
+  }
+}
